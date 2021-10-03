@@ -7,10 +7,6 @@ package event;
 
 import java.sql.Date;
 
-/**
- *
- * @author benth
- */
 public class eventDTO {
     private String eventID;
     private String eventName;
@@ -20,13 +16,14 @@ public class eventDTO {
     private String categoryID;
     private String statusID;
     private int limitMember;
-    private String roomID;
+    private int roomID;
     private String interestedID;
+    private String content;
 
     public eventDTO() {
     }
 
-    public eventDTO(String eventID, String eventName, Date createDate, Date eventStartDate, String userID, String categoryID, String statusID, int limitMember, String roomID, String interestedID) {
+    public eventDTO(String eventID, String eventName, Date createDate, Date eventStartDate, String userID, String categoryID, String statusID, int limitMember, int roomID, String interestedID,String content) {
         this.eventID = eventID;
         this.eventName = eventName;
         this.createDate = createDate;
@@ -37,6 +34,7 @@ public class eventDTO {
         this.limitMember = limitMember;
         this.roomID = roomID;
         this.interestedID = interestedID;
+        this.content=content;
     }
 
     public String getEventID() {
@@ -103,11 +101,11 @@ public class eventDTO {
         this.limitMember = limitMember;
     }
 
-    public String getRoomID() {
+    public int getRoomID() {
         return roomID;
     }
 
-    public void setRoomID(String roomID) {
+    public void setRoomID(int roomID) {
         this.roomID = roomID;
     }
 
@@ -117,6 +115,14 @@ public class eventDTO {
 
     public void setInterestedID(String interestedID) {
         this.interestedID = interestedID;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
     
     
